@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-content: center;
+  background-color: rgb(36, 36, 36);
+  height: 80px;
+  line-height: 70px;
+  padding: 0 20px;
+  font-family: "Rubik", sans-serif;
+  font-size: 26px;
+}
+.littleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.littleContainer button {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(169, 249, 168);
+  border: none;
+  border-radius: 30px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+
+.littleContainer button:hover {
+  background-color: rgb(40, 170, 37);
+}
+
+.littleContainer p {
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.littleContainer p:hover {
+  transform: scale(1.1);
+  color: #98b8ed;
+}
+
+.littleContainer input {
+  width: 250px;
+  height: 20px;
+  border-radius: 5px;
+  font-family: "Rubik", sans-serif;
+}
+
+.littleContainer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
