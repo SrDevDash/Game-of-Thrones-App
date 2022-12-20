@@ -1,29 +1,11 @@
 import React from "react";
 import styles from "./FormLogin.module.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-const validate = (data) => {
-  const result = {};
-  const expRegular =
-    /^(([^<>()[\].,;:\s@\"]+(\.[^<>()[\].,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\].,;:\s@\"]+\.)+[^<>()[\].,;:\s@\"]{2,})$/i;
-
-  if (!expRegular.test(data.email)) {
-    result.email = "Email is not valid";
-  }
-
-  if (data.password.length < 5) {
-    result.password = "Password must have a last 5 length";
-  }
-
-  !/[0-9]/.test(data.password) &&
-    (result.password = "Password must have a last one number");
-
-  return result;
-};
+// import { useNavigate } from "react-router-dom";
+import validate from "./validate";
 
 const FormLogin = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [errors, setErrors] = useState({
     email: "",
@@ -35,11 +17,13 @@ const FormLogin = () => {
     password: "",
   });
 
+  // esperando por backend y redux para terminar la implementación
   const handleSubmit = (e) => {
     if (!errors) {
       fetch("url:3000/login").then((data) => {
         if (data.data) {
-          navigate("/");
+          // navigate solo se puse usar cuando implementamos las rutas
+          //  navigate("/");
         }
       });
     }
