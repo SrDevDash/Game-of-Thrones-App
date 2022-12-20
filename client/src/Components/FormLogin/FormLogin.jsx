@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./FormLogin.module.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const validate = (data) => {
   const result = {};
@@ -22,6 +23,8 @@ const validate = (data) => {
 };
 
 const FormLogin = () => {
+  const navigate = useNavigate();
+
   const [errors, setErrors] = useState({
     email: "",
     password: "",
@@ -32,6 +35,16 @@ const FormLogin = () => {
     password: "",
   });
 
+  const handleSubmit = (e) => {
+    if (!errors) {
+      fetch("url:3000/login").then((data) => {
+        if (data.data) {
+          navigate("/");
+        }
+      });
+    }
+  };
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -40,7 +53,7 @@ const FormLogin = () => {
 
   return (
     <div>
-      <form className={styles.container}>
+      <form onSubmit={handleSubmit} className={styles.container}>
         <h2 className={styles.title}>SIGN IN</h2>
 
         <input
