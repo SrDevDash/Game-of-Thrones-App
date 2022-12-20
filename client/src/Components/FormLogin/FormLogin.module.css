@@ -19,10 +19,13 @@
   border-radius: 3px;
 }
 
-.errorsText {
-  font-size: 15px;
-  color: rgb(239, 80, 80);
-  margin: 0;
+@keyframes login {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 .btn {
@@ -39,44 +42,20 @@
   background-color: rgb(111, 251, 111);
 }
 
-.btn:hover {
-  background-color: rgb(117, 186, 232);
-}
-
 .input {
   border-radius: 5px;
-  height: 30px;
+  height: 25px;
   width: 300px;
   font-size: large;
   background-color: rgb(122, 122, 122);
   color: white;
   margin: 5px 0px;
-
-  transition: 1s;
-}
-
-.inputWarning {
-  border-radius: 5px;
-  height: 30px;
-  width: 300px;
-  font-size: large;
-  background-color: rgb(122, 122, 122);
-  color: white;
-  margin: 5px 0px;
-  border: 1px solid rgb(249, 97, 97);
-}
-
-.input:focus {
-  border: none;
 }
 
 .input::placeholder {
   color: white;
 }
 
-.inputWarning::placeholder {
-  color: white;
-}
 .title {
   color: #46ad58;
 }
@@ -84,8 +63,4 @@
 label {
   color: #bcf7ed;
   text-align: start;
-}
-
-.btn:disabled {
-  opacity: 80%;
 }
