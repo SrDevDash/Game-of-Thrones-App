@@ -1,0 +1,45 @@
+.carta {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 20rem;
+  width: 15rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 5%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
+  margin: 20px;
+}
+
+.carta img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.carta h3 {
+  color: white;
+  margin-top: 0px;
+  padding-top: 0px;
+  justify-content: center;
+}
+
+.carta p {
+  color: white;
+  font-size: 70%;
+  margin-top: -10px;
+  padding-top: 0px;
+}
+
+.carta:hover {
+  transform: scale(1.04);
+  transition: 1s ease-out;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.9);
+}
