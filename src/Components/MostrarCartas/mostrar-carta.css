@@ -1,13 +1,27 @@
-body{
-    background-image: url("https://images3.alphacoders.com/869/869197.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.mostrarCartasBg {
+  background: url("https://images3.alphacoders.com/869/869197.jpg")
+     center center;
+  background-size: cover;
+  width: 100vw;
+  height: auto;
+  margin-top: -80px;
+  padding-top: 90px;
 }
 
-.contenedor-cartas{
-    padding-top: 3%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, .6);
+.contenedor-cartas {
+  margin: 5% 3% 2% 3%;
+
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .mostrarCartasBg {
+    height: 100%;
+  }
 }

@@ -1,0 +1,15 @@
+.footerBg{
+    background-color: black;
+    background-size: cover;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: auto;
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+   
+    
+}

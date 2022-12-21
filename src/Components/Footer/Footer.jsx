@@ -1,11 +1,13 @@
 import React from "react";
+import "./footer.css"
 
 const Footer = () => {
-  return (
-    <div>
-      <h1>Footer</h1>
-    </div>
-  );
+  return <footer className="footerBg">Aplicación creada por Daniel Gálvez, Gibson, Tere y Pedro
+
+
+
+  
+  </footer>;
 };
 
 export default Footer;

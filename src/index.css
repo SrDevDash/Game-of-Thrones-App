@@ -12,4 +12,24 @@ code {
     monospace;
 }
 
+.btnVolver{
+  border: none;
+  padding: 10px;
+  background-size: auto;
+  background-position: center;
+  background-image: url("https://cdn.pixabay.com/photo/2016/04/14/12/43/background-1328834__340.jpg");
+  color: white;
+  text-shadow: 7px 1px 10px #000;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 20px;
+  width: 10rem;
+  box-shadow:  3px 4px 15x #000;
+  margin: 10px;
+}
 
+.btnVolver:hover{
+  box-shadow: 1px 1px 10px #fff;
+
+}

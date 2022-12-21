@@ -1,11 +1,12 @@
 .carta {
   border: 1px solid rgba(255, 255, 255, 0.18);
-  height: 20rem;
+  height: auto;
   width: 15rem;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   margin: 5%;
+  background-size: cover;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.6),
@@ -27,6 +28,7 @@
 .carta h3 {
   color: white;
   margin-top: 0px;
+  font-size: medium;
   padding-top: 0px;
   justify-content: center;
 }
@@ -35,11 +37,21 @@
   color: white;
   font-size: 70%;
   margin-top: -10px;
-  padding-top: 0px;
+  padding-top: -10px;
 }
 
 .carta:hover {
   transform: scale(1.04);
   transition: 1s ease-out;
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.9);
+}
+
+@media screen and(max-width: 1080px) {
+  .carta p {
+    color: white;
+    font-size: 70%;
+    margin-top: -20px;
+    padding-top: -10px;
+  }
+  
 }
