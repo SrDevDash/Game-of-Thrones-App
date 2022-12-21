@@ -10,9 +10,13 @@ const FormSignUp = () => {
   const [errors, setErrors] = useState({
     email: "",
     password: "",
+    name: "",
+    phone: "",
   });
 
   const [form, setForm] = useState({
+    name: "",
+    phone: "",
     email: "",
     password: "",
   });
@@ -25,6 +29,9 @@ const FormSignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (errors.email || errors.password) return;
+
     axios
       .post("http://localhost:3001/users/singup", form)
       .then((data) => {
@@ -40,8 +47,26 @@ const FormSignUp = () => {
         <h2 className={styles.title}>SIGN UP</h2>
 
         <input
+          placeholder="Name"
+          className={styles.input}
+          type="text"
+          name="name"
+          onChange={handleChange}
+          value={form.name}
+        />
+        {errors.name && <p className={styles.errorsText}>{errors.name}</p>}
+        <input
+          placeholder="Phone"
+          className={styles.input}
+          type="number"
+          name="phone"
+          onChange={handleChange}
+          value={form.phone}
+        />
+        {errors.phone && <p className={styles.errorsText}>{errors.phone}</p>}
+        <input
           placeholder="Email"
-          className={errors.email ? styles.inputWarning : styles.input}
+          className={styles.input}
           type="text"
           name="email"
           onChange={handleChange}
