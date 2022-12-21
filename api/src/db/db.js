@@ -1,6 +1,6 @@
 const db = {
   users: [],
-  data: [
+  characters: [
     {
       id: 0,
       firstName: "Daenerys",
@@ -533,5 +533,99 @@ const db = {
       imageUrl: "https://thronesapi.com/assets/images/bronn.jpg",
     },
   ],
+  houses: [
+    {
+      id: 1,
+      name: "Targaryen",
+      words: "Blood and Fire",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/1/1e/House_Targaryen.svg/545px-House_Targaryen.svg.png",
+    },
+    {
+      id: 2,
+      name: "Tarly",
+      words: "First in Battle.",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/c/cc/House_Tarly.svg/545px-House_Tarly.svg.png",
+    },
+    {
+      id: 3,
+      name: "Stark",
+      words: "Winter is comming",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/7/7e/House_Stark.svg/545px-House_Stark.svg.png",
+    },
+    {
+      id: 4,
+      name: "Baratheon",
+      words: "Ours Is the Fury",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/2/2d/House_Baratheon.svg/545px-House_Baratheon.svg.png",
+    },
+    {
+      id: 5,
+      name: "Lannister",
+      words: "Hear my Roar!",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/d/d5/House_Lannister.svg/545px-House_Lannister.svg.png",
+    },
+    {
+      id: 6,
+      name: "Greyjoy",
+      words: "We Do Not Sow",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/5/5b/House_Greyjoy.svg/545px-House_Greyjoy.svg.png",
+    },
+    {
+      id: 7,
+      name: "Clegane",
+      words: "",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/b/b6/House_Clegane.svg/545px-House_Clegane.svg.png",
+    },
+    {
+      id: 8,
+      name: "Baelish",
+      words: "",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/9/9e/House_Baelish.svg/545px-House_Baelish.svg.png",
+    },
+    {
+      id: 9,
+      name: "Tully",
+      words: "Family, Duty, Honor",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/6/61/House_Tully.svg/545px-House_Tully.svg.png",
+    },
+    {
+      id: 10,
+      name: "Bolton",
+      words: "Our Blades are Sharp",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/0/0c/House_Bolton.svg/545px-House_Bolton.svg.png",
+    },
+    {
+      id: 11,
+      name: "Mormont",
+      words: "Here We Stand",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/4/46/House_Mormont.svg/545px-House_Mormont.svg.png",
+    },
+    {
+      id: 12,
+      name: "Martell",
+      words: "Unbowed, Unbent, Unbroken",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/6/60/House_Martell.svg/600px-House_Martell.svg.png",
+    },
+    {
+      id: 13,
+      name: "Arryn",
+      words: "	As High as Honor",
+      imageUrl:
+        "https://awoiaf.westeros.org/images/thumb/b/b4/House_Arryn.svg/545px-House_Arryn.svg.png",
+    },
+  ],
 };
+
 module.exports = db;
