@@ -13,8 +13,6 @@ import NotFoundPage from "./Components/NotFoundPage/404-page";
 function App() {
   return (
     <div className="App">
-
-
       <Routes>
         <Route path="/" element={<Navbar />} />
         <Route path="/detail/:id" element={<DetallesCasa />} />
@@ -24,9 +22,6 @@ function App() {
         <Route path="/createAvatar" element={<FormCrearAvatar />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-
-
-
     </div>
   );
 }
