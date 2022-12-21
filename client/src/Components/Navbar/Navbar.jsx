@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.littleContainer}>
@@ -16,9 +16,8 @@ const Navbar = () => {
           <input placeholder="ID" type="text" name="searchInput" />
           <button>Search</button>
         </div>
-        <Link to="/login">
-          <p>Sign out</p>
-        </Link>
+
+        <p onClick={() => props.setAccess(false)}>Sign out</p>
       </div>
     </div>
   );

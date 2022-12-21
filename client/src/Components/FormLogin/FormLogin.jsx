@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import validate from "./validate";
 import axios from "axios";
 
-const FormLogin = () => {
+const FormLogin = (props) => {
   const navigate = useNavigate();
 
   const [errors, setErrors] = useState({
@@ -27,6 +27,7 @@ const FormLogin = () => {
         .post("http://localhost:3001/users/login", form)
         .then((data) => {
           if (data.data.result.access) {
+            props.setAccess(true);
             navigate("/");
           } else {
             alert("Usuario no encontrado");
