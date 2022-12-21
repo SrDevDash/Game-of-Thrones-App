@@ -4,8 +4,8 @@ const db = require("..//db/db");
 const { usersSingup } = require("./testRouters/testfunctions/functions");
 
 singUpRouter.post("/users/singup", (req, res) => {
-  const { email, password } = req.body;
-  const result = usersSingup(email, password);
+  const { email, password, name, phone } = req.body;
+  const result = usersSingup(email, password, name, phone);
 
   if (!result) return res.sendStatus(400);
   if (result) {

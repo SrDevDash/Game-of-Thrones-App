@@ -1,10 +1,14 @@
 const db = require("./../../..//db/db");
 
-const usersSingup = (email, password) => {
+const usersSingup = (email, password, name, phone) => {
   const finduser = db.users.find((user) => user.email === email);
   if (
     typeof email !== "string" ||
     !email ||
+    typeof name !== "string" ||
+    !name ||
+    typeof phone !== "string" ||
+    !phone ||
     typeof password !== "string" ||
     !password
   ) {
