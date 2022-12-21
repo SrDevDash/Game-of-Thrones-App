@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+a:link,
+a:visited {
+  color: #000000; /* Establece el color del texto del enlace */
+  text-decoration: none; /* Elimina la decoración del enlace */
+}
