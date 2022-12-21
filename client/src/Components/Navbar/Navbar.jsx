@@ -9,11 +9,11 @@ const Navbar = () => {
         <Link to="/">
           <p>Home</p>
         </Link>
-        <button>Filter</button>
+        <p>Filter</p>
       </div>
       <div className={styles.littleContainer}>
         <div>
-          <input type="text" name="searchInput" />
+          <input placeholder="ID" type="text" name="searchInput" />
           <button>Search</button>
         </div>
         <Link to="/login">
