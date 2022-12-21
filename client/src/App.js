@@ -17,8 +17,8 @@ function App() {
 
   useEffect(() => {
     console.log("effect");
-    access ? navigate('/') : navigate('/login');
-  }, [access, navigate])
+    !access && navigate('/login');
+  }, [access])
 
   return (
     <div className="App">

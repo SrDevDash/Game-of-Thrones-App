@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+
+  width: 30%;
+  padding: 2em;
+  margin: auto;
+  margin-top: 40px;
+
+  background-color: #2a2a2a;
+
+  font-family: "Unbounded", cursive;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 3px;
+}
+
+.errorsText {
+  font-size: 15px;
+  color: rgb(239, 80, 80);
+  margin: 0;
+}
+
+.btn {
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  height: 35px;
+  font-family: "Unbounded", cursive;
+  cursor: pointer;
+
+  width: 300px;
+  transition: 1s;
+  background-color: #3def5b;
+}
+
+.btn:hover {
+  background-color: rgb(83, 131, 215);
+}
+
+.input {
+  border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  font-size: large;
+  background-color: rgb(122, 122, 122);
+  color: white;
+  margin: 5px 0px;
+
+  transition: 1s;
+}
+
+.inputWarning {
+  border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  font-size: large;
+  background-color: rgb(122, 122, 122);
+  color: white;
+  margin: 5px 0px;
+  border: 1px solid rgb(249, 97, 97);
+}
+
+.input:focus {
+  border: none;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.inputWarning::placeholder {
+  color: white;
+}
+.title {
+  color: #3def5b;
+}
+
+label {
+  color: #bcf7ed;
+  text-align: start;
+}
+
+.btn:disabled {
+  opacity: 80%;
+}
+
+.container p {
+  margin: 0;
+  padding: 0;
+}
+
+.container div {
+  display: flex;
+  justify-content: end;
+  align-content: flex-end;
+  color: #98e1a4;
+  font-size: small;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.container div:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
