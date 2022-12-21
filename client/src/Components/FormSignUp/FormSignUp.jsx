@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormSingUp = () => {
+const FormSignUp = () => {
   return (
     <div>
       <h1>Formulario SingUp</h1>
@@ -8,4 +8,4 @@ const FormSingUp = () => {
   );
 };
 
-export default FormSingUp;
+export default FormSignUp;

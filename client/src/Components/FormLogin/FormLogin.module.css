@@ -35,12 +35,12 @@
   cursor: pointer;
 
   width: 300px;
-
-  background-color: rgb(111, 251, 111);
+  transition: 1s;
+  background-color: #3def5b;
 }
 
 .btn:hover {
-  background-color: rgb(117, 186, 232);
+  background-color: rgb(83, 131, 215);
 }
 
 .input {
@@ -78,7 +78,7 @@
   color: white;
 }
 .title {
-  color: #46ad58;
+  color: #3def5b;
 }
 
 label {
@@ -88,4 +88,24 @@ label {
 
 .btn:disabled {
   opacity: 80%;
+}
+
+.container p {
+  margin: 0;
+  padding: 0;
+}
+
+.container div {
+  display: flex;
+  justify-content: end;
+  align-content: flex-end;
+  color: #98e1a4;
+  font-size: small;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.container div:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
