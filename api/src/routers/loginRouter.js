@@ -3,7 +3,7 @@ const loginRouter = express.Router();
 const db = require("../db/db");
 const { usersLogin } = require("./testRouters/testfunctions/functions");
 
-loginRouter.get("/", (req, res) => {
+loginRouter.post("/", (req, res) => {
   const { email, password } = req.body;
   const result = usersLogin(email, password);
   if (!result) return res.sendStatus(400);
