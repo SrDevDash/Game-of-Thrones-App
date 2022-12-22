@@ -1,11 +1,11 @@
 import { GET_ALL_CHARACTERS, GET_CHARACTER, CREATE_CHARACTER, DELETE_CHARACTER } from "./actions";
-
+import { GET_ALL_HOUSES, GET_HOUSE, CREATE_HOUSE, DELETE_HOUSE } from "./actions";
 
 const initialState = {
   characters: [],
   character: {},
-  // houses:[],
-  // house:{}
+  houses: [],
+  house: {}
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -32,6 +32,29 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         characters: state.characters.filter((char) => char.id !== action.payload)
+      }
+    case GET_ALL_HOUSES:
+      return {
+        ...state,
+        houses: action.payload
+      }
+
+    case GET_HOUSE:
+      return {
+        ...state,
+        house: action.payload
+      }
+
+    case CREATE_HOUSE:
+      return {
+        ...state,
+        houses: [...state.houses, action.payload]
+      }
+
+    case DELETE_HOUSE:
+      return {
+        ...state,
+        houses: state.houses.filter((house) => house.id !== action.payload)
       }
     default:
       return { ...state }

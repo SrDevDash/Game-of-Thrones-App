@@ -9,11 +9,16 @@ import FormSignUp from "./Components/FormSignUp/FormSignUp";
 import FormCrearCasa from './Components/FormCrearCasa/FormCrearCasa'
 import FormCrearAvatar from "./Components/FormCrearAvatar/FormCrearAvatar";
 import NotFoundPage from "./Components/NotFoundPage/404-page";
+import { useDispatch } from "react-redux";
+import { getAllCharacters } from './redux/actions';
 
 
 function App() {
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  dispatch(getAllCharacters());
 
   useEffect(() => {
     console.log("effect");
