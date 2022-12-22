@@ -1,11 +1,13 @@
 import React from "react";
+
 import styles from "./FormLogin.module.css";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import validate from "./validate";
+import axios from "axios";
 
-const FormLogin = () => {
-  // const navigate = useNavigate();
+const FormLogin = (props) => {
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState({
     email: "",
@@ -19,13 +21,19 @@ const FormLogin = () => {
 
   // esperando por backend y redux para terminar la implementación
   const handleSubmit = (e) => {
-    if (!errors) {
-      fetch("url:3000/login").then((data) => {
-        if (data.data) {
-          // navigate solo se puse usar cuando implementamos las rutas
-          //  navigate("/");
-        }
-      });
+    e.preventDefault();
+    if (!errors.password || !errors.email) {
+      axios
+        .post("http://localhost:3001/users/login", form)
+        .then((data) => {
+          if (data.data.result.access) {
+            props.setAccess(true);
+            navigate("/");
+          } else {
+            alert("Usuario no encontrado");
+          }
+        })
+        .catch((err) => console.log(err));
     }
   };
 
@@ -33,6 +41,10 @@ const FormLogin = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
 
     setErrors(validate({ ...form, [e.target.name]: e.target.value }));
+  };
+
+  const handleRegister = () => {
+    navigate("/signup");
   };
 
   return (
@@ -61,10 +73,15 @@ const FormLogin = () => {
         {errors.password && (
           <p className={styles.errorsText}>{errors.password}</p>
         )}
-
-        <button disabled className={styles.btn}>
+        <button
+          disabled={errors.email || errors.password}
+          className={styles.btn}
+        >
           Log In
         </button>
+        <div>
+          <p onClick={handleRegister}>Register</p>
+        </div>
       </form>
     </div>
   );

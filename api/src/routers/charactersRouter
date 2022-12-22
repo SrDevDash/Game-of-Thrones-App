@@ -1,0 +1,63 @@
+const express = require("express");
+const { characters } = require("./..//db/db");
+const charactersRouter = express.Router();
+const {
+  findcharacters,
+  createCharacter,
+  modifyCharacter,
+  getAllCharacters,
+  eraseCharacters,
+} = require("./testRouters/testfunctions/functions");
+
+charactersRouter.get("/characters/:id", (req, res) => {
+  const { id } = req.params;
+  const result = findcharacters(id);
+
+  if (!result) return res.sendStatus(400);
+
+  return res.status(200).send(result);
+});
+
+charactersRouter.get("/allcharacters", (req, res) => {
+  const result = getAllCharacters();
+
+  if (!result.length) return res.sendStatus(404);
+
+  return res.status(200).send(result);
+});
+
+charactersRouter.post("/characters/create", (req, res) => {
+  const { firstName, lastName, fullName, title, family } = req.body;
+  const result = createCharacter(firstName, lastName, fullName, title, family);
+
+  if (!result) return res.sendStatus(400);
+
+  return res.status(200).send(result);
+});
+charactersRouter.put("/characters/modify/:id", (req, res) => {
+  const { id } = req.params;
+  const { firstName, lastName, fullName, title, family } = req.body;
+  const result = modifyCharacter(
+    id,
+    firstName,
+    lastName,
+    fullName,
+    title,
+    family
+  );
+
+  if (!result) return res.sendStatus(400);
+
+  return res.status(200).send(result);
+});
+charactersRouter.delete("/characters/delete/:id", (req, res) => {
+  const { id } = req.params;
+
+  const result = eraseCharacters(id);
+
+  if (!result) return res.sendStatus(400);
+
+  return res.status(200).send(result);
+});
+
+module.exports = charactersRouter;
