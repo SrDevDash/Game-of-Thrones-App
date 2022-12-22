@@ -1,5 +1,5 @@
 const db = {
-  users: [],
+  users: [{ email: "admin@admin.com", password: "123456" }],
   characters: [
     {
       id: 0,

@@ -1,10 +1,12 @@
 const express = require("express");
+const { characters } = require("./..//db/db");
 const charactersRouter = express.Router();
 const {
   findcharacters,
   createCharacter,
   modifyCharacter,
   getAllCharacters,
+  eraseCharacters,
 } = require("./testRouters/testfunctions/functions");
 
 charactersRouter.get("/characters/:id", (req, res) => {
@@ -43,6 +45,15 @@ charactersRouter.put("/characters/modify/:id", (req, res) => {
     title,
     family
   );
+
+  if (!result) return res.sendStatus(400);
+
+  return res.status(200).send(result);
+});
+charactersRouter.delete("/characters/delete/:id", (req, res) => {
+  const { id } = req.params;
+
+  const result = eraseCharacters(id);
 
   if (!result) return res.sendStatus(400);
 
