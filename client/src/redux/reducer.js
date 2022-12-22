@@ -4,6 +4,8 @@ import { GET_ALL_CHARACTERS, GET_CHARACTER, CREATE_CHARACTER, DELETE_CHARACTER }
 const initialState = {
   characters: [],
   character: {},
+  // houses:[],
+  // house:{}
 };
 
 const rootReducer = (state = initialState, action) => {

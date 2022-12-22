@@ -4,14 +4,14 @@ export const CREATE_CHARACTER = 'CREATE_CHARACTER';
 export const DELETE_CHARACTER = 'DELETE_CHARACTER';
 
 //para buscar todas las houses/ personajes
-export const getAllCharacters = () => dispatch => {
-  return fetch(`https://thronesapi.com/api/v2/Characters`)
-    .then(response => response.json())
-    .then(data =>
-      dispatch({
-        type: GET_ALL_CHARACTERS,
-        payload: data
-      }))
+
+export const getAllCharacters = () => async (dispatch) => {
+  try {
+    let response = await axios.get('')
+    return dispatch({ type: GET_ALL_CHARACTERS, payload: response.data })
+  } catch (error) {
+    console.log(error)
+  }
 };
 
 //para buscar una house por el id pasado
