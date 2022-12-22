@@ -138,6 +138,38 @@ const modifyHouse = (id, name, words) => {
   }
   return false;
 };
+
+const eraseHouses = (id) => {
+  const newArr = db.houses.filter((house) => house.id !== parseInt(id));
+  const result = db.houses.find((house) => house.id === parseInt(id));
+  if (!id || typeof id !== "string") {
+    return false;
+  } else {
+    if (result) {
+      db.houses = newArr;
+
+      return { success: true };
+    } else {
+      return { success: false };
+    }
+  }
+};
+
+const eraseCharacters = (id) => {
+  const newArr = db.characters.filter((char) => char.id !== parseInt(id));
+  const result = db.characters.find((char) => char.id === parseInt(id));
+  if (!id || typeof id !== "string") {
+    return false;
+  } else {
+    if (result) {
+      db.characters = newArr;
+
+      return { success: true };
+    } else {
+      return { success: false };
+    }
+  }
+};
 module.exports = {
   usersSingup,
   usersLogin,
@@ -149,4 +181,6 @@ module.exports = {
   modifyHouse,
   getAllHouses,
   getAllCharacters,
+  eraseHouses,
+  eraseCharacters,
 };
