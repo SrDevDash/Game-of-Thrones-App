@@ -11,7 +11,7 @@ singUpRouter.post("/users/singup", (req, res) => {
   if (result) {
     db.users = [...db.users, req.body];
 
-    return res.status(200).send({ result });
+    return res.status(200).send(result);
   }
 });
 

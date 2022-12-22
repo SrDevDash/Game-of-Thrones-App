@@ -7,7 +7,7 @@ loginRouter.get("/users/login", (req, res) => {
   const result = usersLogin(email, password);
   if (!result) return res.sendStatus(400);
 
-  return res.status(200).send({ result });
+  return res.status(200).send(result);
 });
 
 module.exports = loginRouter;
